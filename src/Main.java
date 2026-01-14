@@ -7,12 +7,21 @@ public class Main {
         System.out.println("Numbers: " + numbers[2] 
             + " Fruits: " + fruits[2]);*/
 
-        Person p = new Person("Faustillo", 15, 2);
+        Person p = new Person("Faustillo", 15, 5);
 
        //System.out.println("Name pet 1: " + p.getPets());
 
+       if (p.addpet(new Pet("misinguillo", "Cat"))) {
+            IOManage.readMessage("Pet added susccessfully");
+            
+       }else{
+            IOManage.readMessage("Failed to add pet bro");
+       }
+
         for (Pet pet : p.getPetManager().getPets()) {
-            System.out.println(pet.getPetName());
+            if (pet != null) {
+                IOManage.readMessage(pet.getPetName());
+            }
         }
     }
 }

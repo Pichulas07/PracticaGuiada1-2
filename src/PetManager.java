@@ -29,7 +29,7 @@ public class PetManager {
     //Metodo add
     public boolean addPet(Pet pet){
         if(pet != null){
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < pets.length; i++) {
                 if (pets[i] == null) {
                     pets[i] = pet;
                     size++;
