@@ -50,7 +50,7 @@ public class PetManager {
 
 
     //Corrimiento a la izquierda
-    private void corrimientoIzq(int index){
+    private void moveToLeft(int index){
         for (int i = index; i < size; i++) {
             if (pets[i] != null) {
                 pets[i] = pets[i+1];
@@ -62,7 +62,7 @@ public class PetManager {
     public boolean removePets(Pet pet){
         for (int i = 0; i < size; i++) {
             if (pets[i].equals(pet)) {
-                corrimientoIzq(i);
+                moveToLeft(i);
                 pets[pets.length -1] = null;
                 size--;
                 return  true;
